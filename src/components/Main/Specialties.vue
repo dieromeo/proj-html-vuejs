@@ -41,6 +41,8 @@ export default {
 section {
     text-align: center;
     position: relative;
+    height: 640px;
+    background-color: $team-bg;
 
     .specialties-content {
         display: flex;
