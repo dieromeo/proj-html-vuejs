@@ -1,14 +1,18 @@
 <script>
 import BigLeftArrow from '../BigLeftArrow.vue';
 import BigRightArrow from '../BigRightArrow.vue';
+import HeaderPreview from './HeaderPreview.vue';
 import Topbar from './Topbar.vue';
 
 export default {
     name: 'HeaderComponent',
-    components: { Topbar, BigLeftArrow, BigRightArrow },
+    components: { Topbar, BigLeftArrow, BigRightArrow, HeaderPreview },
     data() {
         return {
-            status: 'first'
+            status: 'first',
+            content: [
+                { title: 'Our Team', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua.' }
+            ]
         }
     },
     methods: {
@@ -28,6 +32,7 @@ export default {
             <Topbar />
             <BigLeftArrow class="absolute-left" @click="prevStatus" />
             <BigRightArrow class="absolute-right" @click="nextStatus" />
+            <HeaderPreview :titolo="content[0].title" :contenuto="content[0].paragraph" />
         </div>
     </header>
 </template>
