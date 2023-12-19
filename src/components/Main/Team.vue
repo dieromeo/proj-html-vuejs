@@ -8,8 +8,12 @@ export default {
     components: { SmallRightArrow, SmallLeftArrow, TeamCard },
     data() {
         return {
-            image: { url: '../../../public/img/h1-img-01.jpg', alt: 'Jason Bickford' }
+            image: { url: '../../../public/img/h1-img-01.jpg', alt: 'Jason Bickford' },
+            cards: [
+                { title: 'Jason Bickford', subtitle: 'Fouder and Executive Director', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ...' }
+            ]
         }
+
     }
 }
 </script>
@@ -24,9 +28,9 @@ export default {
                         <SmallLeftArrow />
                         <SmallRightArrow />
                     </div>
-                    <div class="cards-container">
-                        <TeamCard />
-                    </div>
+                </div>
+                <div class="cards-container" v-for="card in cards">
+                    <TeamCard :titolo="card.title" :sottotitolo="card.subtitle" :paragrafo="card.paragraph" />
                 </div>
             </div>
         </div>
@@ -38,7 +42,6 @@ export default {
 
 section {
     background-color: $team-bg;
-    position: relative;
 }
 
 .team {
@@ -49,6 +52,7 @@ section {
 
     .small-container {
         padding: 140px 0;
+        position: relative;
     }
 
     .image-container {
@@ -59,6 +63,12 @@ section {
             width: 100%;
             display: block;
         }
+    }
+
+    .cards-container {
+        position: absolute;
+        right: 0;
+        top: 25%;
     }
 }
 
