@@ -1,7 +1,7 @@
 <script>
 import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/Header/HeaderComponent.vue';
-import MainComponent from './components/MainComponent.vue';
+import MainComponent from './components/Main/MainComponent.vue';
 
 export default {
     components: { HeaderComponent, MainComponent, FooterComponent }
