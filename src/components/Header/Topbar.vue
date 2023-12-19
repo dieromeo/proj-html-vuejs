@@ -9,11 +9,9 @@ export default {
 </script>
 
 <template>
-    <div class="big-container">
-        <div class="top-bar">
-            <Logo />
-            <Navbar />
-        </div>
+    <div class="top-bar">
+        <Logo />
+        <Navbar />
     </div>
 </template>
 
