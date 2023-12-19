@@ -1,6 +1,8 @@
 /*************
 COMMON
 *************/
+@use './variables' as *;
+
 
 .big-container {
     width: 1765px;
@@ -17,4 +19,8 @@ a {
 
 button {
     all: unset;
+}
+
+.dot {
+    color: $secondary-color;
 }

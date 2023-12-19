@@ -1,14 +1,27 @@
 <script>
+import MainButton from '../MainButton.vue';
 export default {
     name: 'HeaderPreview',
-    props: ['titolo', 'contenuto']
+    props: ['titolo', 'contenuto'],
+    components: { MainButton },
+    data() {
+        return {
+            firstButton: 'Read more',
+            secondButton: 'purchase'
+        }
+    }
+
 }
 </script>
 
 <template>
     <div class="info">
-        <h1>{{ titolo }}<span>.</span></h1>
+        <h1>{{ titolo }}<span class="dot">.</span></h1>
         <p>{{ contenuto }}</p>
+        <div class="buttons">
+            <MainButton :testoBottone="firstButton" />
+            <MainButton class="purchase" :testoBottone="secondButton" />
+        </div>
     </div>
 </template>
 
@@ -28,6 +41,17 @@ export default {
         font-size: 20px;
         margin-top: 30px;
         color: $text-secondary;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+        margin-top: 50px;
+
+        .purchase {
+            color: $white;
+            background-color: $secondary-color;
+        }
     }
 }
 </style>
