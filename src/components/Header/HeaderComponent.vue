@@ -54,16 +54,4 @@ header {
         height: 100%;
     }
 }
-
-.absolute-left {
-    position: absolute;
-    left: 0;
-    top: 50%;
-}
-
-.absolute-right {
-    position: absolute;
-    right: 0;
-    top: 50%;
-}
 </style>

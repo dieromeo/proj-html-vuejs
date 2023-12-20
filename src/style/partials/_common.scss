@@ -29,3 +29,15 @@ button {
 .dot {
     color: $secondary-color;
 }
+
+.absolute-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.absolute-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
