@@ -13,21 +13,18 @@ export default {
                     title: 'Melbourne Coaching',
                     time: '9:00 am - 5:00 pm, Jan 7, 2022',
                     location: 'Cambridge, MA 02138, USA',
-                    more: 'Read more'
                 },
                 {
                     date: { day: '11', month: 'Jan', year: '2022' },
                     title: 'New York Coaching',
                     time: '9:00 am - 5:00 pm, Jan 11, 2022',
                     location: 'Cambridge, MA 02138, USA',
-                    more: 'Read more'
                 },
                 {
                     date: { day: '21', month: 'Jan', year: '2022' },
                     title: 'London Coaching',
                     time: '9:00 am - 5:00 pm, Jan 21, 2022',
                     location: 'Cambridge, MA 02138, USA',
-                    more: 'Read more'
                 }
             ]
         };
@@ -45,8 +42,7 @@ export default {
                 </div>
                 <ul>
                     <li v-for="event in events">
-                        <Event :data="event.date" :titolo="event.title" :time="event.time" :luogo="event.location"
-                            :more="event.more" />
+                        <Event :data="event.date" :titolo="event.title" :time="event.time" :luogo="event.location" />
                     </li>
                 </ul>
             </div>

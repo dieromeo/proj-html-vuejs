@@ -1,7 +1,10 @@
 <script>
+import ReadMore from '../ReadMore.vue';
+
 export default {
     name: 'Event',
-    props: ['data', 'titolo', 'time', 'luogo', 'more']
+    props: ['data', 'titolo', 'time', 'luogo',],
+    components: { ReadMore }
 }
 </script>
 
@@ -21,7 +24,7 @@ export default {
                 <font-awesome-icon :icon="['fas', 'location-dot']" />
                 <p>{{ luogo }}</p>
             </div>
-            <h3>{{ more.toUpperCase() }}</h3>
+            <ReadMore />
         </div>
     </div>
 </template>
@@ -55,12 +58,6 @@ export default {
             color: $text-secondary;
             font-size: 16px;
             display: flex;
-        }
-
-        h3 {
-            margin-top: 15px;
-            font-size: 14px;
-            cursor: pointer;
         }
 
         svg {
