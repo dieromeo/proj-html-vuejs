@@ -10,9 +10,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faClock } from '@fortawesome/free-regular-svg-icons'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 
-library.add(faArrowRightLong, faArrowLeftLong, faMagnifyingGlass, faBars, faLinkedinIn, faFacebookF, faTwitter)
+library.add(faArrowRightLong, faArrowLeftLong, faMagnifyingGlass, faBars, faLinkedinIn, faFacebookF, faTwitter, faClock, faLocationDot)
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon)
     .mount('#app')
