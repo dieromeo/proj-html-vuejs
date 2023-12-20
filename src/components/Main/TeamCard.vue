@@ -1,10 +1,11 @@
 <script>
 import Bar from '../Bar.vue';
+import Socials from '../Socials.vue'
 
 export default {
     name: 'TeamCard',
     props: ['titolo', 'sottotitolo', 'paragrafo'],
-    components: { Bar }
+    components: { Bar, Socials }
 }
 </script>
 
@@ -14,6 +15,7 @@ export default {
         <p class="sottotitolo">{{ sottotitolo }}</p>
         <Bar />
         <p class="paragraph">{{ paragrafo }}</p>
+        <Socials />
     </div>
 </template>
 
@@ -21,7 +23,7 @@ export default {
 @use '../../style/partials/variables' as *;
 
 .card-container {
-    padding: 90px 120px 100px 28px;
+    padding: 90px 120px 100px 60px;
     max-width: 700px;
     background-color: $white;
 
@@ -37,6 +39,7 @@ export default {
     .paragraph {
         margin-top: 30px;
         font-size: 19px;
+        color: $text-secondary;
     }
 }
 </style>
