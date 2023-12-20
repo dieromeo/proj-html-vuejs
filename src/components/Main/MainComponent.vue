@@ -1,4 +1,5 @@
 <script>
+import Carousel from './Carousel.vue';
 import CreativeLeader from './CreativeLeader.vue';
 import LatestNews from './LatestNews.vue';
 import Specialties from './Specialties.vue';
@@ -8,7 +9,7 @@ import UpcomingEvents from './UpcomingEvents.vue';
 
 export default {
     name: 'MainComponent',
-    components: { Specialties, Team, UpcomingEvents, CreativeLeader, LatestNews, Testimonials }
+    components: { Specialties, Team, UpcomingEvents, CreativeLeader, LatestNews, Testimonials, Carousel }
 }
 </script>
 
@@ -19,6 +20,7 @@ export default {
     <CreativeLeader />
     <LatestNews />
     <Testimonials />
+    <Carousel />
 </template>
 
 <style></style>
