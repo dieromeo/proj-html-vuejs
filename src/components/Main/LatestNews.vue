@@ -71,7 +71,6 @@ section {
     background-color: $team-bg;
 
     .big-container {
-        height: 950px;
         position: relative;
         padding: 120px 0 140px 0;
 
@@ -83,12 +82,12 @@ section {
     }
 
     .small-container {
-        text-align: center;
 
         .info-section {
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
 
             h2 {
                 font-size: 45px;
