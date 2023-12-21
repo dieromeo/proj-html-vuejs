@@ -11,12 +11,27 @@ export default {
                 { url: '../../../public/img/h3-img-04.png', alt: 'Cynthia Clark', name: 'Cynthia Clark', content: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."', active: true, id: 1 },
                 { url: '../../../public/img/h3-img-07.png', alt: 'Lorem ipsum', name: 'Lorem ipsum', content: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."', active: false, id: 2 },
                 { url: '../../../public/img/h3-img-08.png', alt: 'Lorem ispum', name: 'Lorem ipsum', content: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."', active: false, id: 3 },
-            ]
+            ],
+            currentIndex: 0
         }
     },
     methods: {
         barWidth(index) {
             return (this.testimonials[index].id / this.testimonials.length) * 100;
+        },
+        next() {
+            if (this.currentIndex < this.testimonials.length - 1) {
+                this.testimonials[this.currentIndex].active = false;
+                this.currentIndex++;
+                this.testimonials[this.currentIndex].active = true;
+            }
+        },
+        prev() {
+            if (this.currentIndex !== 0) {
+                this.testimonials[this.currentIndex].active = false;
+                this.currentIndex--;
+                this.testimonials[this.currentIndex].active = true;
+            }
         }
     }
 }
@@ -26,8 +41,8 @@ export default {
     <section>
         <div class="big-container">
             <!-- frecce  -->
-            <BigLeftArrow class="absolute-left" />
-            <BigRightArrow class="absolute-right" />
+            <BigLeftArrow class="absolute-left" @click="prev" />
+            <BigRightArrow class="absolute-right" @click="next" />
             <!-- immagini  -->
             <div class="testimonial-content" v-for="(testimonial, index) in testimonials"
                 v-show="testimonial.active === true">
