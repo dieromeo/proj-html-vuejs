@@ -6,15 +6,24 @@ export default {
 </script>
 
 <template>
-    <div class="image-container">
-        <img :src="immagine" :alt="titolo">
+    <div class="card">
+        <div class="image-container">
+            <img :src="immagine" :alt="titolo">
+        </div>
+        <h2>{{ titolo }}</h2>
+        <p>{{ contenuto }}</p>
     </div>
-    <h2>{{ titolo }}</h2>
-    <p>{{ contenuto }}</p>
 </template>
 
 <style lang="scss" scoped>
 @use '../../style/partials/variables' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
 
 h2 {
     margin: 22px 0;
