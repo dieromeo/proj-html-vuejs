@@ -37,6 +37,10 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        background-color: $text-main;
+    }
 }
 
 ul {

@@ -52,6 +52,11 @@ export default {
         h2 {
             margin-bottom: 15px;
             font-size: 18px;
+            cursor: pointer;
+
+            &:hover {
+                color: $secondary-color;
+            }
         }
 
         .time,
