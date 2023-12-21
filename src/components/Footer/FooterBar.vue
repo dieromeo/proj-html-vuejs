@@ -10,12 +10,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../style/partials/variables' as *;
+@use '../../style/partials/variables' as *;
 
 .bar {
     background-color: $secondary-color;
-    height: 2px;
-    width: 70px;
+    height: 1px;
+    width: 30px;
     margin: 20px 0;
 }
 </style>
