@@ -11,15 +11,24 @@ export default {
             title: 'Contact us',
             subtitle: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
             logoLIst: [
-                { url: '../../../public/img/h4-clients-img-03.png', alt: 'logo' },
-                { url: '../../../public/img/h4-clients-img-05.png', alt: 'logo' },
-                { url: '../../../public/img/h4-clients-img-07.png', alt: 'logo' },
-                { url: '../../../public/img/h4-clients-img-09.png', alt: 'logo' },
-                { url: '../../../public/img/h4-clients-img-01.png', alt: 'logo' },
+                { fisrtUrl: '../../../public/img/h4-clients-img-03.png', secondUrl: '../../../public/img/h4-clients-img-04-1.png', alt: 'logo', active: true },
+                { fisrtUrl: '../../../public/img/h4-clients-img-05.png', secondUrl: '../../../public/img/h4-clients-img-06-1.png', alt: 'logo', active: true },
+                { fisrtUrl: '../../../public/img/h4-clients-img-07.png', secondUrl: '../../../public/img/h4-clients-img-08-1.png', alt: 'logo', active: true },
+                { fisrtUrl: '../../../public/img/h4-clients-img-09.png', secondUrl: '../../../public/img/h4-clients-img-10-1.png', alt: 'logo', active: true },
+                { fisrtUrl: '../../../public/img/h4-clients-img-01.png', secondUrl: '../../../public/img/h4-clients-img-02.png', alt: 'logo', active: true },
             ]
         };
     },
-    components: { ReadMore, Form }
+    components: { ReadMore, Form },
+    methods: {
+        changeLogo(index) {
+            if (this.logoLIst[index].active === true) {
+                this.logoLIst[index].active = false;
+            } else {
+                this.logoLIst[index].active = true;
+            }
+        }
+    }
 }
 </script>
 
@@ -45,8 +54,9 @@ export default {
                 </div>
             </div>
             <ul>
-                <li v-for="logo in logoLIst">
-                    <a href="#"><img :src="logo.url" :alt="logo.alt"></a>
+                <li v-for="(logo, index) in logoLIst">
+                    <a href="#"><img @mouseenter="changeLogo(index)" @mouseleave="changeLogo(index)"
+                            :src="logo.active === true ? logo.fisrtUrl : logo.secondUrl" :alt="logo.alt"></a>
                 </li>
             </ul>
         </div>

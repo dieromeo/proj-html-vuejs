@@ -25,13 +25,17 @@ export default {
 <template>
     <section>
         <div class="big-container">
+            <!-- frecce  -->
             <BigLeftArrow class="absolute-left" />
             <BigRightArrow class="absolute-right" />
+            <!-- immagini  -->
             <div class="testimonial-content" v-for="(testimonial, index) in testimonials"
                 v-show="testimonial.active === true">
                 <img :src="testimonial.url" :alt="testimonial.alt">
+                <!-- titolo e contenuto  -->
                 <h2>{{ testimonial.name }}</h2>
                 <p>{{ testimonial.content }}</p>
+                <!-- barra del carosello  -->
                 <div class="carousel-bar">
                     <span>0{{ testimonial.id }}</span>
                     <div class="bar">
