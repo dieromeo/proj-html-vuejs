@@ -13,5 +13,6 @@ export default {
 <style lang="scss" scoped>
 .right-arrow {
     font-size: 25px;
+    cursor: pointer;
 }
 </style>
