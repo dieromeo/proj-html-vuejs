@@ -1,5 +1,5 @@
 <script>
-import FooterComponent from './components/FooterComponent.vue';
+import FooterComponent from './components/Footer/FooterComponent.vue';
 import HeaderComponent from './components/Header/HeaderComponent.vue';
 import MainComponent from './components/Main/MainComponent.vue';
 
