@@ -15,6 +15,7 @@ export default {
 </script>
 
 <template>
+    <!-- titolo e contenuto header  -->
     <div class="info">
         <h1>{{ titolo }}<span class="dot">.</span></h1>
         <p>{{ contenuto }}</p>

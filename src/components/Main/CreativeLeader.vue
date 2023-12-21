@@ -23,6 +23,7 @@ export default {
 <template>
     <section>
         <div class="small-container">
+            <!-- titolo e contenuto  -->
             <div class="left">
                 <h2> {{ title }}<span class="dot">.</span></h2>
                 <Bar />
@@ -30,6 +31,7 @@ export default {
                 <ReadMore />
             </div>
             <div class="right">
+                <!-- percentuali  -->
                 <div v-for="bar in bars">
                     <div class="info-percentuale">
                         <h2>{{ bar.title }}</h2>

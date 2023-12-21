@@ -20,13 +20,16 @@ export default {
     <Bar />
     <div class="form">
         <form action="">
+            <!-- input per nome e email  -->
             <div class="input-text">
                 <input type="text" placeholder="Your Name">
                 <input type="text" placeholder="Your Email">
             </div>
+            <!-- area di testo  -->
             <div class="text-area">
                 <textarea placeholder="Write a message..." rows="6"></textarea>
             </div>
+            <!-- submit  -->
             <MainButton :testoBottone="buttonContent" class="form-button" />
         </form>
     </div>

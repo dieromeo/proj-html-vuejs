@@ -23,9 +23,11 @@ export default {
 <template>
     <section class="">
         <div class="specialties-content big-container">
+            <!-- titolo e contenuto  -->
             <h2>{{ title }}<span class="dot">.</span></h2>
             <p>{{ content }}</p>
             <Bar />
+            <!-- cards  -->
             <ul>
                 <li v-for="card in cards">
                     <SpecialtiesCard :immagine="card.url" :titolo="card.title" :contenuto="card.content" />

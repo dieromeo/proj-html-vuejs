@@ -27,16 +27,19 @@ export default {
     <section>
         <div class="small-container">
             <div class="main-content">
+                <!-- parte di sinistra con mappa  -->
                 <div class="left">
                     <img :src="mapImage.url" :alt="mapImage.alt">
                     <img class="new-york" :src="plusImage.url" :alt="plusImage.alt">
                     <img class="melbourne" :src="plusImage.url" :alt="plusImage.alt">
                     <img class="london" :src="plusImage.url" :alt="plusImage.alt">
+                    <!-- evento  -->
                     <div class="event">
                         <h2>New York Coaching</h2>
                         <ReadMore class="no-mg" />
                     </div>
                 </div>
+                <!-- parte destra con form  -->
                 <div class="right">
                     <Form :titolo="title" :sottotitolo="subtitle" />
                 </div>

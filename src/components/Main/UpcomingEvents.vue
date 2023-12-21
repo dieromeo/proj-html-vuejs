@@ -40,6 +40,7 @@ export default {
                 <div class="title">
                     <h2>{{ title }}</h2>
                 </div>
+                <!-- eventi  -->
                 <ul>
                     <li v-for="event in events">
                         <Event :data="event.date" :titolo="event.title" :time="event.time" :luogo="event.location" />

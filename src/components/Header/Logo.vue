@@ -10,6 +10,7 @@ export default {
 </script>
 
 <template>
+    <!-- logo  -->
     <img :src="logo.img" :alt="logo.alt">
 </template>
 

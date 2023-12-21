@@ -7,9 +7,11 @@ export default {
 
 <template>
     <div class="card">
+        <!-- immagine  -->
         <div class="image-container">
             <img :src="immagine" :alt="titolo">
         </div>
+        <!-- titolo e contenuto  -->
         <h2>{{ titolo }}</h2>
         <p>{{ contenuto }}</p>
     </div>

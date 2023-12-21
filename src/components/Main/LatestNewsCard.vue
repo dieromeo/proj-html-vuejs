@@ -10,14 +10,17 @@ export default {
 
 <template>
     <div class="cards">
+        <!-- immagine  -->
         <div class="img-container">
             <img :src="immagine.url" :alt="immagine.alt">
+            <!-- didascalia immagine  -->
             <div class="business">
                 <font-awesome-icon icon="fa-solid fa-tag" />
                 <p>Business, Leading</p>
             </div>
         </div>
         <div class="card-content">
+            <!-- info carta e contenuto  -->
             <div class="card-info">
                 <font-awesome-icon icon="fa-regular fa-clock" />
                 <p>{{ data }}</p>

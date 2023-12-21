@@ -22,6 +22,7 @@ export default {
     <section>
         <div class="team big-container">
             <div class="small-container">
+                <!-- immagine con frecce  -->
                 <div class="image-container">
                     <img :src="image.url" :alt="image.alt">
                     <div class="arrows">
@@ -29,6 +30,7 @@ export default {
                         <SmallRightArrow />
                     </div>
                 </div>
+                <!-- cards  -->
                 <div class="cards-container" v-for="card in cards">
                     <TeamCard :titolo="card.title" :sottotitolo="card.subtitle" :paragrafo="card.paragraph" />
                 </div>

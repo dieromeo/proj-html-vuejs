@@ -42,6 +42,7 @@ export default {
 <template>
     <section>
         <div class="big-container">
+            <!-- immagine di sfondo  -->
             <div class="bg-image">
                 <img src="../../../public/img/svg-4.svg" alt="">
             </div>
@@ -49,10 +50,12 @@ export default {
             <BigRightArrow class="absolute-right" />
             <div class="small-container">
                 <div class="info-section">
+                    <!-- titolo e sottotitolo  -->
                     <h2>{{ title }}<span class="dot">.</span></h2>
                     <p>{{ subtitle }}</p>
                     <Bar />
                 </div>
+                <!-- cards  -->
                 <ul>
                     <li v-for="card in cards">
                         <LatestNewsCard :immagine="card.img" :data="card.data" :autore="card.author" :titolo="card.title"

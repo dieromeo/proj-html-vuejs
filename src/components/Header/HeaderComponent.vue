@@ -16,9 +16,11 @@ export default {
         }
     },
     methods: {
+        // scorrere carosello in avanti
         nextStatus() {
             this.status = 'second';
         },
+        // scorrere carosello indietro
         prevStatus() {
             this.status = 'first';
         },

@@ -10,10 +10,12 @@ export default {
 
 <template>
     <div class="event">
+        <!-- data  -->
         <div class="data">
             <h3>{{ data.day }}</h3>
             <p>{{ data.month }} {{ data.year }}</p>
         </div>
+        <!-- info con data e luogo -->
         <div class="info">
             <h2>{{ titolo }}</h2>
             <div class="time">

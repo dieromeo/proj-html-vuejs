@@ -22,6 +22,7 @@ export default {
 <template>
     <nav>
         <SmallRightArrow class="orange" />
+        <!-- lista della navbar  -->
         <ul>
             <li v-for="element in list">
                 <a :href="element.link" :class="element.active === true ? 'orange' : ''">{{ element.title.toUpperCase()

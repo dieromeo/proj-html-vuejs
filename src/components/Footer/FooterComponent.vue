@@ -15,6 +15,7 @@ export default {
     <footer>
         <div class="top">
             <div class="small-container">
+                <!-- componenti con titolo e contenuto  -->
                 <About class="about" />
                 <Footertwitter />
                 <ImportatLinks />
