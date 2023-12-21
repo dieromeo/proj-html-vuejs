@@ -1,15 +1,25 @@
 <script>
 import ReadMore from '../ReadMore.vue';
+import Form from './Form.vue';
 
 export default {
     name: 'AboutUs',
     data() {
         return {
             mapImage: { url: '../../../public/img/h1-contact-rev-01.png', alt: 'map' },
-            plusImage: { url: '../../../public/img/h1-contact-rev-02.png', alt: 'plus' }
+            plusImage: { url: '../../../public/img/h1-contact-rev-02.png', alt: 'plus' },
+            title: 'Contact us',
+            subtitle: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
+            logoLIst: [
+                { url: '../../../public/img/h4-clients-img-03.png', alt: 'logo' },
+                { url: '../../../public/img/h4-clients-img-05.png', alt: 'logo' },
+                { url: '../../../public/img/h4-clients-img-07.png', alt: 'logo' },
+                { url: '../../../public/img/h4-clients-img-09.png', alt: 'logo' },
+                { url: '../../../public/img/h4-clients-img-01.png', alt: 'logo' },
+            ]
         };
     },
-    components: { ReadMore }
+    components: { ReadMore, Form }
 }
 </script>
 
@@ -27,8 +37,15 @@ export default {
                         <ReadMore class="no-mg" />
                     </div>
                 </div>
-                <div class="right"></div>
+                <div class="right">
+                    <Form :titolo="title" :sottotitolo="subtitle" />
+                </div>
             </div>
+            <ul>
+                <li v-for="logo in logoLIst">
+                    <a href="#"><img :src="logo.url" :alt="logo.alt"></a>
+                </li>
+            </ul>
         </div>
     </section>
 </template>
@@ -43,10 +60,12 @@ export default {
 .main-content {
     display: flex;
     gap: 70px;
+    align-items: center;
 
     .left {
         width: 50%;
         position: relative;
+        max-height: 316px;
 
         .new-york {
             position: absolute;
@@ -88,5 +107,11 @@ export default {
     .right {
         width: 50%;
     }
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 140px;
 }
 </style>
